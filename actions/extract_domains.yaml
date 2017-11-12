@@ -1,6 +1,6 @@
 ---
 name: "extract_tld"
-runner_type: "python-script"
+runner_type: "run-python"
 description: "Extract TLDs from text"
 enabled: true
 entry_point: "extract_domains.py"
