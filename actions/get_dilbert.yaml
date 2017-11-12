@@ -1,0 +1,6 @@
+---
+name: "random_dilbert"
+runner_type: "run-python"
+description: "Random Dilbert Fun time"
+enabled: true
+entry_point: "get_dilbert.py"
