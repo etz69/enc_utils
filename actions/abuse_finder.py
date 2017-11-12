@@ -1,4 +1,4 @@
-from abuse_finder import domain_abuse
+import abuse_finder
 
 from st2actions.runners.pythonrunner import Action
 
@@ -13,7 +13,7 @@ class AbuseFinder(Action):
 
 
         try:
-            result = domain_abuse(tld)
+            result = abuse_finder.domain_abuse(tld)
             _abuse_contact = str(result['abuse'][0])
         except Exception as e:
             self.logger.error('Abuse finder ended with error')
