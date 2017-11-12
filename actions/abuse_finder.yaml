@@ -1,0 +1,11 @@
+---
+name: "abuse_finder"
+runner_type: "python-script"
+description: "Find abuse contact for a domain"
+enabled: true
+entry_point: "abuse_finder.py"
+parameters:
+  tld:
+    description: "Domain to query"
+    type: "string"
+    required: true
