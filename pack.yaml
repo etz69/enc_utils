@@ -1,6 +1,6 @@
 ---
-name: Utils
 ref: enc_utils
+name: Utils
 description: A small POC pack providing various useful utils
 keywords:
     - utilities

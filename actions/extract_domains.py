@@ -1,6 +1,5 @@
-from tld import get_tld
-
 from st2actions.runners.pythonrunner import Action
+from tld import get_tld
 
 
 class ExtractDomains(Action):
