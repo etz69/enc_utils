@@ -8,7 +8,7 @@ class RandomDilbert(Action):
     def __init__(self, config=None):
         super(RandomDilbert, self).__init__(config=config)
 
-    def run(self, tld):
+    def run(self):
         random_terms_year = str(int(random.uniform(1989,2017)))
         random_terms_month = str(int(random.uniform(1,12)))
 
