@@ -1,0 +1,11 @@
+---
+name: "extract_tld"
+runner_type: "python-script"
+description: "Extract TLDs from text"
+enabled: true
+entry_point: "extract_domains.py"
+parameters:
+  input_text:
+    description: "Text to analyze"
+    type: "string"
+    required: true

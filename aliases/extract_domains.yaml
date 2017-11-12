@@ -1,0 +1,10 @@
+---
+name: "extract_tld"
+description: "A simple utility to extract TLDs from text"
+action_ref: "enc_utils.extract_domains"
+formats:
+  - "None"
+ack:
+  enabled: false
+result:
+  format: "Domain extraction finished!{~}"

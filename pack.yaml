@@ -1,0 +1,7 @@
+---
+name: Utils
+ref: enc_utils
+description: A small POC pack providing various useful utils
+version: 0.0.1
+author: etz
+email: etz@mail.com
