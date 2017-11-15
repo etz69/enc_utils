@@ -11,4 +11,12 @@ ack:
   enabled: false
   append_url: false
 result:
-  format: "Dilbert completed! {~} {{ execution.result }}"
+  format: |
+    {% if execution.status == 'succeeded' %}
+    Take a break with some Dilbert!{~}
+    {{ execution.result.result.dilbert_image }}
+
+    {% else %}
+    No Dilbert :( go back to work: {{execution.result.result.error}}{~}
+    See `{{execution.id}}` for more details.
+    {% endif %}
