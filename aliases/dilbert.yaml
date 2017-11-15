@@ -1,0 +1,22 @@
+---
+name: "dilbert"
+pack: "enc_utils"
+description: "Return random Dilbert story"
+action_ref: "enc_utils.random_dilbert"
+formats:
+  - display: "dilbert: Get random Dilbert story"
+    representation:
+      - "dilbert"
+ack:
+  enabled: false
+  append_url: false
+result:
+  format: |
+    {% if execution.status == 'succeeded' %}
+    Take a break with some Dilbert!{~}
+    {{ execution.result.result.dilbert_image }}
+
+    {% else %}
+    No Dilbert :( go back to work: {{execution.result.result.error}}{~}
+    See `{{execution.id}}` for more details.
+    {% endif %}
