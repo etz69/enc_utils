@@ -1,9 +1,12 @@
 ---
 name: "extract_tld"
+pack: "enc_utils"
 description: "A simple utility to extract TLDs from text"
 action_ref: "enc_utils.extract_domains"
 formats:
-  - "None"
+  - display: "tld: Extract TLD from text"
+    representation:
+      - "tld"
 ack:
   enabled: false
 result:
