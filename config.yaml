@@ -1,5 +1,0 @@
----
-  input_text:
-    description: "Text to analyze"
-    type: "string"
-    required: true
