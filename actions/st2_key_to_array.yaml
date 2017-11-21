@@ -1,7 +1,7 @@
 ---
 name: "st2_key_to_array"
 runner_type: "run-python"
-description: "Convert ST2 string to array"
+description: "Convert ST2 string to array with delimeter"
 enabled: true
 entry_point: "st2_key_to_array.py"
 parameters:
@@ -9,3 +9,8 @@ parameters:
     description: "ST2 key to retrieve value and convert"
     type: "string"
     required: true
+  delimeter:
+    description: "Delimeter to use for the split"
+    type: "string"
+    required: true
+    default: ","

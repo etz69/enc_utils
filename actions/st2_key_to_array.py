@@ -10,13 +10,13 @@ class St2KeyToArray(Action):
         token = os.environ.get('ST2_ACTION_AUTH_TOKEN', None)
         self.client = Client(api_url=api_url, token=token)
 
-    def run(self, st2_key):
+    def run(self, st2_key, delimeter=","):
 
         _resultObject = list()
-        _st2_value = str(self.client.keys.get_by_name(name=st2_key))
+        _st2_value = str(self.client.keys.get_by_name(name=st2_key).value)
 
         try:
-            _resultObject = _st2_value.split(',')
+            _resultObject = _st2_value.split(delimeter)
         except Exception as e:
             self.logger.error('Could not convert key')
             return False, e
