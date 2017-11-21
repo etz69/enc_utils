@@ -1,0 +1,11 @@
+---
+name: "analyse_offense"
+runner_type: "local-shell-script"
+description: "Analyse Qradar offense"
+enabled: true
+entry_point: "analyzeoffense.sh"
+parameters:
+  alert_id:
+    description: "Offense to analyse"
+    type: "string"
+    required: true

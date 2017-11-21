@@ -14,7 +14,7 @@ result:
   format: |
     {% if execution.status == 'succeeded' %}
     Take a break with some Dilbert!{~}
-    {{ execution.result.result.dilbert_image }}
+    {{ execution.result.result }}
 
     {% else %}
     No Dilbert :( go back to work: {{execution.result.result.error}}{~}

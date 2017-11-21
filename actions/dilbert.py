@@ -1,12 +1,9 @@
-from st2actions.runners.pythonrunner import Action
 from lxml import html
 import requests
 import random
 
 
-class RandomDilbert(Action):
-    def __init__(self, config=None):
-        super(RandomDilbert, self).__init__(config=config)
+class RandomDilbert():
 
     def run(self):
         random_terms_year = str(int(random.uniform(1989, 2017)))
@@ -20,3 +17,7 @@ class RandomDilbert(Action):
         dilbert_image = div[0].attrib['src']
 
         return True, dilbert_image
+
+if __name__ == '__main__':
+   dl = RandomDilbert()
+   print(dl.run())

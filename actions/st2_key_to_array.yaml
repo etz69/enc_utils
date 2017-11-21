@@ -1,0 +1,11 @@
+---
+name: "st2_key_to_array"
+runner_type: "run-python"
+description: "Convert ST2 string to array"
+enabled: true
+entry_point: "st2_key_to_array.py"
+parameters:
+  st2_key:
+    description: "ST2 key to retrieve value and convert"
+    type: "string"
+    required: true

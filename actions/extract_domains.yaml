@@ -4,6 +4,9 @@ runner_type: "run-python"
 description: "Extract TLDs from text"
 enabled: true
 entry_point: "extract_domains.py"
+tags:
+  - name: "artifact_type"
+    value: "tld"
 parameters:
   input_text:
     description: "Text to analyze"
