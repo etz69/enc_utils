@@ -1,4 +1,3 @@
 tld
 abuse_finder
 lxml
-numpy

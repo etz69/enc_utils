@@ -1,7 +1,6 @@
 from st2actions.runners.pythonrunner import Action
 from st2client.client import Client
 
-import numpy as np
 import os
 
 class St2KeyToArray(Action):
@@ -17,7 +16,7 @@ class St2KeyToArray(Action):
         _st2_value = str(self.client.keys.get_by_name(name=st2_key))
 
         try:
-            _resultObject = np.array(_st2_value)
+            _resultObject = _st2_value.split(',')
         except Exception as e:
             self.logger.error('Could not convert key')
             return False, e
